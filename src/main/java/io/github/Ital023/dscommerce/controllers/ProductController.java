@@ -2,11 +2,13 @@ package io.github.Ital023.dscommerce.controllers;
 
 import io.github.Ital023.dscommerce.dto.ProductDTO;
 import io.github.Ital023.dscommerce.entities.Product;
-import io.github.Ital023.dscommerce.repositories.ProductRepository;
 import io.github.Ital023.dscommerce.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -21,5 +23,12 @@ public class ProductController {
        ProductDTO productDTO = productService.findById(id);
        return productDTO;
     }
+
+    @GetMapping
+    public Page<ProductDTO> findAll(Pageable pageable) {
+        return productService.findAll(pageable);
+    }
+
+
 
 }
