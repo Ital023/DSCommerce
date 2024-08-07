@@ -26,7 +26,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    @Transactional(readOnly = true) // evitar o lock de escrita
+    @Transactional(readOnly = true)
     public ProductDTO findById(Long id){
         Product product = productRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Recurso não encontrado"));
