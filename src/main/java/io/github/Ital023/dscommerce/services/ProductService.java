@@ -1,7 +1,9 @@
 package io.github.Ital023.dscommerce.services;
 
+import io.github.Ital023.dscommerce.dto.CategoryDTO;
 import io.github.Ital023.dscommerce.dto.ProductDTO;
 import io.github.Ital023.dscommerce.dto.ProductMinDTO;
+import io.github.Ital023.dscommerce.entities.Category;
 import io.github.Ital023.dscommerce.entities.Product;
 import io.github.Ital023.dscommerce.repositories.ProductRepository;
 import io.github.Ital023.dscommerce.services.exceptions.DatabaseException;
@@ -28,6 +30,8 @@ public class ProductService {
     public ProductDTO findById(Long id){
         Product product = productRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Recurso não encontrado"));
+
+        System.out.println(product);
 
         ProductDTO productDTO = new ProductDTO(product);
 
@@ -89,7 +93,12 @@ public class ProductService {
         entity.setDescription(productDTO.getDescription());
         entity.setPrice(productDTO.getPrice());
         entity.setImgUrl(productDTO.getImgUrl());
-
+        entity.getCategories().clear();
+        for(CategoryDTO catDto : productDTO.getCategories()){
+            Category cat = new Category();
+            cat.setId(catDto.getId());
+            entity.getCategories().add(cat);
+        }
     }
 
 }
