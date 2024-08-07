@@ -98,6 +98,7 @@ public class ProductService {
             Category cat = new Category();
             cat.setId(catDto.getId());
             entity.getCategories().add(cat);
+
         }
     }
 
