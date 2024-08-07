@@ -1,6 +1,7 @@
 package io.github.Ital023.dscommerce.controllers;
 
 import io.github.Ital023.dscommerce.dto.ProductDTO;
+import io.github.Ital023.dscommerce.dto.ProductMinDTO;
 import io.github.Ital023.dscommerce.entities.Product;
 import io.github.Ital023.dscommerce.services.ProductService;
 import jakarta.validation.Valid;
@@ -30,8 +31,8 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<ProductDTO>> findAll(@RequestParam(name = "name", defaultValue = "") String name, Pageable pageable) {
-        Page<ProductDTO> dto = productService.findAll(name, pageable);
+    public ResponseEntity<Page<ProductMinDTO>> findAll(@RequestParam(name = "name", defaultValue = "") String name, Pageable pageable) {
+        Page<ProductMinDTO> dto = productService.findAll(name, pageable);
         return ResponseEntity.ok(dto);
     }
 

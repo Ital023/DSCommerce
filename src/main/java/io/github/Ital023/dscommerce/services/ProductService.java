@@ -1,6 +1,7 @@
 package io.github.Ital023.dscommerce.services;
 
 import io.github.Ital023.dscommerce.dto.ProductDTO;
+import io.github.Ital023.dscommerce.dto.ProductMinDTO;
 import io.github.Ital023.dscommerce.entities.Product;
 import io.github.Ital023.dscommerce.repositories.ProductRepository;
 import io.github.Ital023.dscommerce.services.exceptions.DatabaseException;
@@ -34,10 +35,10 @@ public class ProductService {
     }
 
     @Transactional(readOnly = true) // evitar o lock de escrita
-    public Page<ProductDTO> findAll(String name, Pageable pageable){
+    public Page<ProductMinDTO> findAll(String name, Pageable pageable){
         Page<Product> result = productRepository.searchByName(name, pageable);
 
-        return result.map(x -> new ProductDTO(x));
+        return result.map(x -> new ProductMinDTO(x));
     }
 
 
