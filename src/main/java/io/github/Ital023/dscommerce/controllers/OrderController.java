@@ -43,7 +43,7 @@ public class OrderController {
                 .toUri();
 
 
-        return ResponseEntity.ok(dto);
+        return ResponseEntity.created(uri).body(dto);
     }
 
 
