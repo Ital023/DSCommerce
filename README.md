@@ -5,8 +5,7 @@
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 # Sobre o projeto
-
-
+Dscommerce é uma aplicação fullstack desenvolvida com Spring Boot e React. O objetivo do projeto é permitir a visualização de produtos, realizar pedidos, gerenciar esses pedidos e controlar o fluxo de estoque. Durante o desenvolvimento, aprofundei meus conhecimentos em Spring Security, OAuth2, implementação na nuvem, modelagem de banco de dados e criação de APIs.
 
 Front End: https://github.com/Ital023/DSCommerce-FrontEnd
 
@@ -97,3 +96,19 @@ yarn install
 # executar o projeto
 yarn start
 ```
+## 🤝 Colaboradores
+
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Ital023" title="Github do Ítalo Miranda">
+        <img src="https://avatars.githubusercontent.com/u/113559117?v=4" width="100px;" alt="Foto do Ítalo Miranda no GitHub"/><br>
+        <sub>
+          <b>Ítalo Miranda</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
