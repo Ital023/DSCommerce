@@ -43,6 +43,18 @@ Front End: https://github.com/Ital023/DSCommerce-FrontEnd
 - Front end web: Netlify
 - Banco de dados: Postgresql
 
+# Rotas
+&#9679;	
+
+| Método | Caminho                      | Descrição                                           | Role Necessária                  |
+| ------ | ---------------------------- | -------------------------------------------------- | -------------------------------- |
+| GET    | /products/{id}             | Retorna um produto específico pelo ID.              | Nenhuma                          |
+| GET    | /products                  | Retorna uma lista paginada de produtos, podendo filtrar pelo nome. | Nenhuma            |
+| POST   | /products                  | Adiciona um novo produto.                           | ROLE_ADMIN                     |
+| PUT    | /products/{id}             | Atualiza os dados de um produto específico pelo ID. | ROLE_ADMIN                     |
+| DELETE | /products/{id}             | Remove um produto específico pelo ID.               | ROLE_ADMIN                     |
+
+
 # Como executar o projeto
 
 ## Back end
