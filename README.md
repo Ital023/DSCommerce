@@ -5,7 +5,14 @@
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 # Sobre o projeto
-Dscommerce é uma aplicação fullstack desenvolvida com Spring Boot e React. O objetivo do projeto é permitir a visualização de produtos, realizar pedidos, gerenciar esses pedidos e controlar o fluxo de estoque. Durante o desenvolvimento, aprofundei meus conhecimentos em Spring Security, OAuth2, implementação na nuvem, modelagem de banco de dados e criação de APIs.
+Dscommerce é uma aplicação fullstack desenvolvida com Spring Boot no back end e React no front end. A aplicação permite aos usuários visualizar produtos, realizar pedidos, gerenciar pedidos e controlar o fluxo de estoque.
+
+### Tecnologias Utilizadas
+
+- *Back end:* Spring Boot, com foco em segurança (Spring Security e OAuth2), implementação na nuvem, modelagem de banco de dados e criação de APIs.
+- *Front end:* React, utilizando React Router, lógica de carrinho de compras, React TypeScript, props, useState, e useEffect.
+
+Durante o desenvolvimento, aprofundei meus conhecimentos em todas essas tecnologias, integrando-as para criar uma aplicação robusta e funcional.
 
 Front End: https://github.com/Ital023/DSCommerce-FrontEnd
 
